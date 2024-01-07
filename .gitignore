@@ -17,4 +17,9 @@ compile_commands.json
 CTestTestfile.cmake
 _deps
 LICENSE
-
+*.bin
+*.dis
+*.elf
+*.elf.map
+*.hex
+*.uf2

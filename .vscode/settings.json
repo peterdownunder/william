@@ -1,0 +1,21 @@
+{
+    "cmake.configureOnOpen": false,
+    "cmake.buildBeforeRun": true,
+    "cmake.generator": "Unix Makefiles",
+    "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
+    "cmake.statusbar.advanced": {
+      "debug" : {
+        "visibility": "hidden"
+                },
+      "launch" : {
+        "visibility": "hidden"
+                 },
+      "build" : {
+        "visibility": "default"
+                 },
+      "buildTarget" : {
+        "visibility": "hidden"
+                 },
+       },
+  }
+  

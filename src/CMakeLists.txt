@@ -1,5 +1,5 @@
 add_executable(${ProjectName}
-    main.cpp
+    main.cpp max30105Utils.cpp heartRate.cpp
 )
 
 target_include_directories(${ProjectName} PRIVATE
@@ -9,8 +9,9 @@ target_include_directories(${ProjectName} PRIVATE
 target_link_libraries(${ProjectName} 
     pico_stdlib 
     hardware_pwm 
+    hardware_i2c
     hardware_adc
-    pico_audio_i2s
+    pico_audio_i2s 
     FreeRTOS-Kernel-Heap4 
     )
 

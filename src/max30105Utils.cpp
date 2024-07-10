@@ -24,8 +24,9 @@ bool max30105Utils::begin(uint8_t address)
   printf("device id:0x%02x\n", chipid[0]);
 
   if (chipid[0] != MAX30105_CHIPID)
+  {
     return false;
-
+  }
   // reset i2s
   uint8_t reset[2];
   uint8_t resetstate[1];
@@ -171,7 +172,7 @@ uint16_t max30105Utils::check(void)
 
   #pragma pack()
   int yy = sizeof(db.Levels);
-  printf("%d %d %d\n", yy, sizeof(db.readBuffer),  sizeof(db));  
+//  printf("%d %d %d\n", yy, sizeof(db.readBuffer),  sizeof(db));  
   uint8_t readPointer = getReadPointer();
   uint8_t writePointer = getWritePointer();
   int numberOfSamples = 0;
@@ -240,7 +241,7 @@ uint16_t max30105Utils::check(void)
         memccpy(db.readBuffer, readBuffer, 128, sizeof(db.readBuffer));
         int32_t ir = db.Levels.InfraRed;
         int32_t rr = reverse_bit32(db.Levels.InfraRed);
-        printf("Red: %d Green: %d InfraRed: %d\n", ir, rr, tempIR);
+//        printf("Red: %d Green: %d InfraRed: %d\n", ir, rr, tempIR);
         toGet -= activeLEDs * 3;
       }
     }
